@@ -39,9 +39,14 @@
 * Insert LCD **SCL** to **Analog pin A5** of Arduino
 
 **Battery Connections**
-*Insert **+ve** of battry to **Positive** line of breadboard
+*Insert **+ve** of battry to **Positive** line of bread
 *Insert **-ve** of battry to **Nagetive** line of breadboard
 
-**LED Connections**
-* Insert one end of LED to **c25(Emmiter of transistor)** of breadboard
-* Insert another end of LED to **Positive** line of breadboard
+**LED Connections(Issue Fixed)**
+* Insert a **220 Ohm to 330 Ohm** Resistor (for LED current limiting) in **a30** (one end) and **a31** (other end)
+* Insert one end of LED (the longer leg / Anode) in **a31** (same row as resistor's end).
+* Insert another end of LED (the shorter leg / Cathode) in **a32**.
+* Insert a Hookup wire from **a32** (LED Cathode) to **a23** (Transistor Collector).
+* Insert a Hookup wire from **a25** (Transistor Emitter) to **-ve(GND)** point of the breadboard (the negative power rail).
+* Insert a Hookup wire from **a30** (from the LED's series resistor) to the **+ve(Positive)** point of the breadboard (the positive power rail).
+* Insert a Hookup wire from **f24** to **a24** (Transistor Base).
