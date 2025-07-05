@@ -34,7 +34,12 @@ void loop() {
   unsigned long currentMillis = millis();
 
   int sensorValue = analogRead(piezoPin);
-
+  // Immediate LED feedback based on pressure
+    if (sensorValue > threshold) {
+    digitalWrite(ledPin, HIGH); // Turn on LED if pressure exceeds threshold
+  } else {
+    digitalWrite(ledPin, LOW);  // Turn off LED otherwise
+  }
   // Debounce the sensor reading
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
